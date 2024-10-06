@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ticket-container {
+            border: 2px solid #000;
+            padding: 20px;
+            width: 600px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .info {
+            margin: 20px 0;
+        }
+
+            .info h4 {
+                margin-bottom: 5px;
+            }
+
+        .details {
+            margin-top: 20px;
+        }
+
+            .details table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .details th, .details td {
+                border: 1px solid #000;
+                padding: 10px;
+                text-align: left;
+            }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="header">
+            <h1>Train Ticket</h1>
+            <p>Thank you for booking with us!</p>
+        </div>
+        <div class="info">
+            <h4>Passenger Name: {{PassengerName}}</h4>
+            <h4>Booking ID: {{BookingID}}</h4>
+            <h4>Train: {{TrainName}} ({{TrainNumber}})</h4>
+        </div>
+        <div class="details">
+            <table>
+                <tr>
+                    <th>Departure</th>
+                    <td>{{DepartureStation}} at {{DepartureTime}}</td>
+                </tr>
+                <tr>
+                    <th>Arrival</th>
+                    <td>{{ArrivalStation}} at {{ArrivalTime}}</td>
+                </tr>
+                <tr>
+                    <th>Seat Number</th>
+                    <td>{{SeatNumber}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <p>Have a safe journey!</p>
+        </div>
+    </div>
+</body>
+</html>
